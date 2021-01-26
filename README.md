@@ -55,6 +55,6 @@ Sync just once (container is deleted afterwards):
 
 ## Credits
 
-This container is heavily inspired by [istepanov/backup-to-s3](https://github.com/istepanov/docker-backup-to-s3/blob/master/README.md) and [futurevision/backup-to-s3].
+This container is heavily inspired by [istepanov/backup-to-s3](https://github.com/istepanov/docker-backup-to-s3/blob/master/README.md) and [futurevision/aws-s3-sync](https://github.com/futurevision/docker-aws-s3-sync/blob/master/README.md).
 
 The main difference is that this container is using Alpine Linux instead of Debian to be more light weight. It also uses a different method of using the AWS CLI tool and adds options for reverse sync, bandwidth limits, etc.
