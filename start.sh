@@ -7,6 +7,8 @@ export AWS_SECRET_ACCESS_KEY=$SECRET
 export AWS_DEFAULT_REGION=$REGION
 export PARAMS=$PARAMS
 export REVERSE=$REVERSE
+export MAXBW=$MAXBW
+export MAXCR=$MAXCR
 
 if [[ "$1" == 'now' ]]; then
     exec /sync.sh
