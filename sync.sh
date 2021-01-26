@@ -4,6 +4,13 @@ set -e
 
 echo "$(date) - Start"
 
-aws s3 sync /data s3://$BUCKET$BUCKET_PATH $PARAMS
+if [[ "${REVERSE}" == "true" ]]; then
+    export SYNCCMD="aws s3 sync s3://$BUCKET$BUCKET_PATH /data/ $PARAMS"
+else
+	  export SYNCCMD="aws s3 sync /data/ s3://$BUCKET$BUCKET_PATH $PARAMS"
+fi
+
+echo "${SYNCCMD}"                                                                                                                             
+${SYNCCMD}
 
 echo "$(date) End"
