@@ -6,6 +6,17 @@
 
 Docker container that periodically syncs a folder to Amazon S3 using the [AWS Command Line Interface tool](https://aws.amazon.com/cli/) and cron.
 
+## Building
+
+```
+git clone https://github.com/johnsmclay/docker-aws-s3-sync.git
+cd docker-aws-s3-sync
+docker build --network=host --tag aws-s3-sync .
+
+# OPTIONAL: create an image file for use without a repository
+docker save aws-s3-sync:latest > ../aws-s3-sync_v3.tar
+```
+
 ## Usage
 
     docker run -d [OPTIONS] aws-s3-sync
