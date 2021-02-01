@@ -9,6 +9,8 @@ export PARAMS=$PARAMS
 export REVERSE=$REVERSE
 export MAXBW=$MAXBW
 export MAXCR=$MAXCR
+export JOB_NAME=$JOB_NAME
+export LOG_DIR=$LOG_DIR
 
 if [[ "$1" == 'now' ]]; then
     exec /sync.sh

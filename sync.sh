@@ -20,7 +20,9 @@ else
     export SYNCCMD="aws s3 sync /data/ s3://$BUCKET$BUCKET_PATH $PARAMS"
 fi
 
-echo "${SYNCCMD}"                                                                                                                             
-${SYNCCMD}
+echo "${SYNCCMD}"
+LOG_DATE=`date +'%Y-%m-%d_%H%M%S'`
+LOG_FILE_NAME="${JOB_NAME}_${LOG_DATE}_sync.log"                                                                                                                          
+${SYNCCMD} 2>&1 > ${LOG_DIR}/${LOG_FILE_NAME}
 
 echo "$(date) End"

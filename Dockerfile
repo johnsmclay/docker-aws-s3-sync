@@ -17,6 +17,8 @@ ENV PARAMS=
 ENV REVERSE=false
 ENV MAXBW=1000
 ENV MAXCR=10
+ENV JOB_NAME=untitled
+ENV LOG_DIR=/logging
 
 VOLUME ["/data"]
 
