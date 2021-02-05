@@ -11,6 +11,7 @@ export MAXBW=$MAXBW
 export MAXCR=$MAXCR
 export JOB_NAME=$JOB_NAME
 export LOG_DIR=$LOG_DIR
+export LOCAL_PATH=$LOCAL_PATH
 
 if [[ "$1" == 'now' ]]; then
     exec /sync.sh

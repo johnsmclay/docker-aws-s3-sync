@@ -22,9 +22,9 @@ if [[ "${MAXCR}" != "" ]]; then
 fi
 
 if [[ "${REVERSE}" == "true" ]]; then
-	export SYNCCMD="aws s3 sync s3://$BUCKET$BUCKET_PATH /data/ $PARAMS"
+	export SYNCCMD="aws s3 sync s3://${BUCKET}${BUCKET_PATH} ${LOCAL_PATH} ${PARAMS}"
 else
-	export SYNCCMD="aws s3 sync /data/ s3://$BUCKET$BUCKET_PATH $PARAMS"
+	export SYNCCMD="aws s3 sync ${LOCAL_PATH} s3://${BUCKET}${BUCKET_PATH} ${PARAMS}"
 fi
 
 echo "${SYNCCMD}"

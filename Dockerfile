@@ -19,6 +19,7 @@ ENV MAXBW=1000
 ENV MAXCR=10
 ENV JOB_NAME=untitled
 ENV LOG_DIR=/logging
+ENV LOCAL_PATH=/data/
 
 VOLUME ["/data"]
 
