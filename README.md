@@ -28,6 +28,8 @@ docker save aws-s3-sync:latest > ../aws-s3-sync_v3.tar
 * `-e SECRET=<SECRET>`: User Access Secret
 * `-e REGION=<REGION>`: Region of your bucket
 * `-e BUCKET=<BUCKET>`: The name of your bucket
+* `-e LOG_DIR=/logging`: Each sync will generate a log file of what was synced in this directory.
+* `-e JOB_NAME=untitled`: If you have multiple syncs logging to the same directory, this is nice to tell the logs apart.
 * `-v /path/to/backup:/data:ro`: mount target local folder to container's data folder. Content of this folder will be synced with S3 bucket.
 
 ### Optional parameters:
