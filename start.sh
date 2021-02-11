@@ -16,7 +16,7 @@ export LOCAL_PATH=$LOCAL_PATH
 if [[ "$1" == 'now' ]]; then
     exec /sync.sh
 else
-	$CRONFILE=/var/spool/cron/crontabs/root
+	CRONFILE=/var/spool/cron/crontabs/root
 	sed -i '/\/sync.sh/d' $CRONFILE
 	echo "$CRON_SCHEDULE /sync.sh" >> $CRONFILE
     crond -l 2 -f
